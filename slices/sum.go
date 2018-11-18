@@ -6,16 +6,16 @@ func Sum(numbers []int) int {
 	for _, number := range numbers {
 		sum += number
 	}
-	
+
 	return sum
 }
 
 func SumAll(numbersToSum ...[]int) []int {
-	numberOfSlices := len(numbersToSum)
-	sums := make([]int, numberOfSlices)
+	var sums []int
 
-	for i, numbers := range numbersToSum {
-		sums[i] = Sum(numbers)
+	for _, numbers := range numbersToSum {
+		sums = append(sums, Sum(numbers))
 	}
+
 	return sums
 }

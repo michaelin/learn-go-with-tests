@@ -3,7 +3,7 @@ package iteration
 import "testing"
 import "fmt"
 
-func TestRepeat(t *testing.T)  {
+func TestRepeat(t *testing.T) {
 	repeated := Repeat("a", 7)
 	expected := "aaaaaaa"
 
@@ -12,7 +12,7 @@ func TestRepeat(t *testing.T)  {
 	}
 }
 
-func BenchmarkRepeat(b *testing.B)  {
+func BenchmarkRepeat(b *testing.B) {
 	for i := 0; i < b.N; i++ {
 		Repeat("a", 5)
 	}
